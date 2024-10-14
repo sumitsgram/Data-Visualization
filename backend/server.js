@@ -1,11 +1,26 @@
+// server.js
 const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+const analyticsRoutes = require("./routes/analyticsRoutes");
+const authenticateToken = require("./middleware/authMiddleware");
+
+dotenv.config();
 const app = express();
-const port = 3000;
+const PORT = process.env.PORT || 5000;
 
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
+// Connect to MongoDB
+connectDB();
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+// Middleware
+app.use(express.json());
+app.use(authenticateToken); // Use if authentication is required
+
+// Routes
+app.use("/api/analytics", analyticsRoutes);
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
 });
