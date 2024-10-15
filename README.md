@@ -1,26 +1,28 @@
-# Interactive Data Visualization Dashboard
+# Data Ingestion API
 
-## Problem Statement
-Imagine you are working on a project to build a product analytics platform for your company. The platform provides users with real-time data on sales, user engagement, etc. Your task is to develop a front-end application that includes interactive data visualization charts, advanced filtering options, and efficient cookie management for user preferences.
+This project provides a REST API that allows users to upload CSV files containing dataset information. The data from the CSV file is ingested, parsed, and stored in a MongoDB database for further processing and analysis.
 
-Additionally, the user will be sharing a view of the page with specific filters enabled and dates selected through the browser URL. Other users can then access the shared view by simply visiting this URL upon authentication.
+## Features
 
-## Requirements
+- Upload CSV files via REST API.
+- Parse CSV data and validate the required fields.
+- Store the parsed data in MongoDB.
+- Handle file uploads using `multer`.
+- Parse CSV data using `csv-parser`.
+- Error handling for file upload, parsing, and database operations.
 
-### Interactive Data Visualization
-- **Bar Chart**: Build a bar chart to represent the Features. A, B, C... are features and the x-axis is the total time spent between the selected date range.
-- **Line Chart**: Implement a line chart to display the time trend of a particular category upon clicking in the bar chart. The chart should have pan, zoom-in, and zoom-out options on the time range.
+## Technologies Used
 
-### Advanced Filtering
-- **Filters**: Include 2 filters:
-  - Age (15-25, >25)
-  - Gender (male, female)
-- **Date Range Selector**: Add a date range selector component that allows users to choose a specific time range for analytics data. Update the graph based on the selected time range and filters.
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose (MongoDB ORM)
+- Multer (for file uploads)
+- CSV-Parser (for parsing CSV files)
 
-### API Integration and Data Pipeline
-Create an API Integration layer and Data Pipeline. Create an API from the framework of your choice. Here your data pipeline building skill will be evaluated as well as API building skill.
+## Installation
 
-### Data
-The dataset is given below:
-[Frontend Developer Assignment Data](https://docs.google.com/spreadsheets/d/1l7GstWHc69HPV0irSdvoMIyHgtufUPKsbtCiNw7IKR0)
+### Prerequisites
 
+- Node.js and npm installed
+- MongoDB installed and running
