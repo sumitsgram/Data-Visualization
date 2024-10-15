@@ -26,3 +26,12 @@ This project provides a REST API that allows users to upload CSV files containin
 
 - Node.js and npm installed
 - MongoDB installed and running
+
+### Key Sections
+
+- **Project Overview**: Explains what the project does (CSV file upload, parsing, and data storage).
+- **Installation**: How to install dependencies and run the project.
+- **API Endpoints**: Describes how to upload a CSV file.
+- **Sample CSV Format**: Provides an example of the expected CSV structure.
+- **Project Structure**: Gives an overview of the project’s file organization.
+- **Future Enhancements**: Lists potential improvements. 
